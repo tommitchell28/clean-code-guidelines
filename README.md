@@ -51,25 +51,82 @@ Code that is clean and easy to understand reduces the cognitive load for future 
 
 Choose names that clearly express the intention behind the variable, method, or class. This should give enough information for a reader to understand its purpose without needing to dig into the implementation.
 
+```python
+# Bad
+x = 42
+
+# Good
+age = 42
+```
+
 #### Avoid Disinformation
 
 Don't use names that could be misleading or suggest a wrong type. For instance, avoid using the lowercase letter `l` or the uppercase letter `O` as variable names, as they could be mistaken for the numbers `1` and `0`, respectively.
+
+```python
+# Bad
+l = 1
+
+# Good
+length = 1
+```
 
 #### Make Meaningful Distinctions
 
 Avoid names that are easy to misspell or sound similar but have different meanings. For instance, avoid having both `controller` and `control` as class names in the same codebase unless they serve different purposes.
 
+```python
+# Bad
+def control(): pass
+def controller(): pass
+class UserManager(): pass
+class UserManagement(): pass
+
+# Good
+def user_control(): pass
+def system_controller(): pass
+class UserServices(): pass
+class UserAdministration(): pass
+```
+
 #### Use Pronounceable Names
 
-Names should be easily pronounceable. This makes discussion easier and avoids confusion. For example, prefer `customerId` over `cstmrId`.
+Names should be easily pronounceable. This makes discussion easier and avoids confusion.
+
+```python
+# Bad
+cstmrId = 1
+
+# Good
+customer_id = 1
+```
 
 #### Boolean Variables
 
 Prefix booleans with `is`, `has`, `can`, or similar, e.g., `isDone`, `hasPermission`.
 
+```java
+// Bad
+boolean done;
+boolean p;
+
+// Good
+boolean isDone;
+boolean hasPermission;
+
+```
+
 #### Use Searchable Names
 
 The name should be unique enough that a search throughout the codebase returns only the instances you are interested in. Short/single-letter names are *only* acceptable when used as local variables within a short function.
+
+```java
+// Bad
+int s;
+
+// Good
+int speed;
+```
 
 #### Avoid Encodings
 
@@ -79,6 +136,18 @@ Encoding in this context means writing a names in a certain way that it 'retains
 2. Prefixing interfaces with the letter 'I'.
 
 (2) is particularly common, but unnecessary! An interface is just another 'thing' - consumers needn't know that they're dealing with an interface or a concrete class.
+
+```java
+// Bad
+interface IShape { ... }
+String strName = "John";
+int iAge = 25;
+
+// Good
+interface Shape { ... }
+String name = "John";
+int age = 25;
+```
 
 #### Avoid Mental Mapping
 
@@ -94,17 +163,49 @@ Avoid clever and/or humorous names. Keep it simple - say what you mean and mean 
 
 Using Solution Domain Names just means using commonly-known technical terminology within the industry (i.e. Software Engineering) to describe things. For example, algorithm names, pattern names, maths terms etc.
 
+```javascript
+// Bad
+function doStuff() { ... }
+const users = [...];
+class Processor { ... }
+
+// Good
+function quickSort() { ... }
+const userQueue = [...];
+class AbstractFactory { ... }
+```
+
 #### Use Problem Domain Names
 
 'Problem Domain' = Where the requirements are defined (i.e. the customer).
 
 Using Problem Domain Names just means using terminology from the 'real-life' area that the software relates to.
 
+```javascript
+// Bad
+function calculate() { ... }
+
+// Good
+function calculateMortgage() { ... }
+```
+
 #### Add Meaningful Context
 
 Names should live within a well-named class, function or namespace to provide 'full' meaning about what the variable *really* refers to.
 
 For example, a `name` variable on its own could relate to almost anything, but in the scope of a `Animal` class it is clear what it refers to.
+
+```javascript
+// Bad
+const duration = 5;
+function validate() { ... }
+function onClick() { ... }
+
+// Good
+const durationDays = 5;
+function validateUserInput() { ... }
+function onLoginButtonClick() { ... }
+```
 
 #### Don't Add Gratuitous Context
 
