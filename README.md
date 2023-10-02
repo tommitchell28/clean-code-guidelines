@@ -1,5 +1,40 @@
 # Clean Coding Principles
 
+## Contents
+
+- [Background](#background)
+- [Introduction](#introduction)
+- [Meaningful Names](#meaningful-names)
+  - [General Rules](#general-rules)
+  - [Naming Patterns](#naming-patterns)
+- [Functions](#functions)
+  - [General Rules](#general-rules-1)
+- [Comments](#comments)
+  - [Avoid In Most Cases](#avoid-in-most-cases)
+  - [Good Comments](#good-comments)
+  - [Bad Comments](#bad-comments)
+- [Formatting](#formatting)
+  - [General Rules](#general-rules-2)
+- [Objects and Data Structures](#objects-and-data-structures)
+  - [Background](#background-1)
+  - [General Rules](#general-rules-3)
+- [Error Handling](#error-handling)
+  - [General Rules](#general-rules-4)
+- [Boundaries](#boundaries)
+  - [Background](#background-2)
+  - [General Rules](#general-rules-5)
+- [Unit Tests](#unit-tests)
+  - [Test Driven Development (TDD)](#test-driven-development-(tdd))
+  - [Three Laws](#three-laws)
+  - [General Rules](#general-rules-6)
+- [Classes](#classes)
+  - [General Rules](#general-rules-7)
+- [Systems](#systems)
+  - [General Rules](#general-rules-8)
+- [Code Smells](#code-smells)
+  - [Definition](#definition)
+  - [Types](#types)
+
 ## Background
 
 These coding principles are heavily based on the book 'Clean Code: A Handbook of Agile Software Craftsmanship', written by Robert C. Martin.
