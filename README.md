@@ -253,11 +253,41 @@ function getUniqueElements(elements) {
 
 #### Classes
 
-Use a *noun* or *noun phrase* for the name of a class. This means that the name of the class could be the subject of a verb.
+Use a *noun* or *noun phrase* for the name of a class. This means that the name of the class could be the subject of a verb. Avoid using vague and ambiguous terminology in class names e.g. 'Data', 'Info' etc.
 
-Avoid using verbs to name a class - a class shouldn't be a 'do-er', it should be a 'thing'. For example, avoid using 'Manager' and 'Processor' in class names.
+Typically, a class is named in one of two ways:
 
-Avoid using vague and ambiguous terminology in class names e.g. 'Data', 'Info' etc.
+- A **thing** - When represents an entity, concept, or complex data structure.
+- A **'do-er'** - When encapsulating actions, behaviors, or responsibilities.
+
+##### 'Thing' Naming Examples (Problem Domain)
+
+- `User`
+- `Account`
+- `Order`
+
+##### 'Thing' Naming Examples (Solution Domain)
+
+- `LinkedList`
+- `DatabaseConnection`
+- `HttpRequest`
+- `Configuration`
+- `Logger`
+
+##### Do-er Naming Examples (Problem Domain)
+
+- `PaymentProcessor`
+- `EmailSender`
+- `AuthenticationManager`
+- `OrderValidator`
+- `ReportGenerator`
+
+##### Do-er Naming Examples (Common Software Constructs)
+
+- `Controller`: In MVC, handles user input and updates the view.
+- `Service`: Holds business logic in a service-oriented architecture.
+- `Factory`: Creates instances of objects.
+- `Strategy`: Encapsulates an algorithm in the Strategy pattern.
 
 #### Functions
 
