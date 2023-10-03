@@ -216,7 +216,7 @@ This just means that context should not be added to a name when it is not requir
 > A common pitfall is to name a utility function/class based on the context of its initial consumer. Despite the naming 'making sense' in this situation, it can become misleading and confusing when the utility function/class is later consumed from different contexts.
 
 ```javascript
-// Bad - removeDuplicateProductIds is unnecessarily 'tied' to OrderProcessor
+// Bad - removeDuplicateProductIds is unnecessarily 'tied' to OrderProcessor.
 class OrderProcessor {
     constructor(orders) {
         this.orders = orders;
@@ -257,7 +257,7 @@ Use a *noun* or *noun phrase* for the name of a class. This means that the name 
 
 Typically, a class is named in one of two ways:
 
-- A **thing** - When represents an entity, concept, or complex data structure.
+- A **thing** - When representing an entity, concept, or complex data structure.
 - A **'do-er'** - When encapsulating actions, behaviors, or responsibilities.
 
 ##### 'Thing' Naming Examples (Problem Domain)
