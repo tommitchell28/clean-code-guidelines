@@ -213,6 +213,42 @@ function onLoginButtonClick() { ... }
 
 This just means that context should not be added to a name when it is not required.
 
+> A common pitfall is to name a utility function/class based on the context of its initial consumer. Despite the naming 'making sense' in this situation, it can become misleading and confusing when the utility function/class is later consumed from different contexts.
+
+```javascript
+// Bad - removeDuplicateProductIds is unnecessarily 'tied' to OrderProcessor
+class OrderProcessor {
+    constructor(orders) {
+        this.orders = orders;
+    }
+
+    getUniqueProductIds() {
+        const allProductIds = this.orders.map(({ productId }) => productId);
+        return removeDuplicateProductIds(allProductIds);
+    }
+}
+
+function removeDuplicateProductIds(allProductIds) {
+    return [...new Set(allProductIds)]
+}
+
+// Good - getUniqueElements is as generic as possible, meaning it can be used by different consumers.
+class OrderProcessor {
+    constructor(orders) {
+        this.orders = orders;
+    }
+
+    getUniqueProductIds() {
+        const allProductIds = this.orders.map(({ productId }) => productId);
+        return getUniqueElements(allProductIds);
+    }
+}
+
+function getUniqueElements(elements) {
+    return [...new Set(elements)]
+}
+```
+
 ### Naming Patterns
 
 #### Classes
